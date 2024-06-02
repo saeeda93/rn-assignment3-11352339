@@ -88,3 +88,122 @@ const MyComponent = () => (
     />
   </ScrollView>
 );
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    flexGrow: 1,
+    backgroundColor: '#F7F0E8',
+    padding: 20,
+    alignItems: 'stretch',
+  },
+  headerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingBottom: 20,
+  },
+  greetingText: {
+    fontSize: 32,
+    fontWeight: '700',
+    fontFamily: 'Lato, sans-serif',
+  },
+  taskSummaryText: {
+    marginTop: 6,
+    fontSize: 12,
+    fontWeight: '500',
+    fontFamily: 'Lato, sans-serif',
+  },
+  headerImage: {
+    width: 50,
+    aspectRatio: 0.96,
+  },
+  searchBarContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginVertical: 30,
+  },
+  searchBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 14,
+    backgroundColor: '#FBF9F7',
+    padding: 12,
+    flex: 1,
+    marginRight: 20,
+    borderColor: '#FBF9F7',
+    borderWidth: 1,
+  },
+  searchIcon: {
+    width: 24,
+    aspectRatio: 1,
+  },
+  searchText: {
+    marginLeft: 10,
+    fontSize: 16,
+    fontWeight: '700',
+    fontFamily: 'Lato, sans-serif',
+  },
+  searchImage: {
+    width: 50,
+    aspectRatio: 1.04,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    fontFamily: 'Lato, sans-serif',
+    marginVertical: 20,
+  },
+  categoriesContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  categoryCard: {
+    borderRadius: 15,
+    backgroundColor: '#FBF9F7',
+    width: '48%',
+    padding: 16,
+    marginBottom: 20,
+  },
+  categoryName: {
+    fontSize: 16,
+    fontWeight: '700',
+    fontFamily: 'Lato, sans-serif',
+  },
+  categoryTasks: {
+    marginTop: 5,
+    fontSize: 12,
+    fontWeight: '400',
+    fontFamily: 'Lato, sans-serif',
+  },
+  categoryImage: {
+    width: '100%',
+    height: undefined,
+    aspectRatio: 1.19,
+    alignSelf: 'center',
+  },
+  taskItem: {
+    borderRadius: 15,
+    borderColor: '#E8D1BA',
+    borderWidth: 1,
+    backgroundColor: '#FBF9F7',
+    padding: 16,
+    marginVertical: 10,
+  },
+  taskText: {
+    fontSize: 16,
+    fontWeight: '700',
+    fontFamily: 'Lato, sans-serif',
+  },
+
+  searchInput: {
+    marginLeft: 10,
+    fontSize: 16,
+    fontWeight: '700',
+    fontFamily: 'Lato, sans-serif',
+    flex: 1, 
+  },
+});
+
+export default MyComponent;
