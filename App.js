@@ -50,3 +50,41 @@ const SearchBar = () => (
     <Image resizeMode="auto" source={{ uri: 'https://cdn.builder.io/api/v1/image/assets/TEMP/026a689143d8184b3eecbf7c5dc81ec6e70d1e0163a9526d3f7420a3242ef154?apiKey=84db356c45aa4a6ba9aaac34a35b9fe0&' }} style={styles.searchImage} />
   </View>
 );
+
+const CategoryCard = ({ name, tasks, imageUri }) => (
+  <View style={styles.categoryCard}>
+    <Text style={styles.categoryName}>{name}</Text>
+    <Text style={styles.categoryTasks}>{tasks}</Text>
+    <Image resizeMode="auto" source={{ uri: imageUri }} style={styles.categoryImage} />
+  </View>
+);
+
+const TaskItem = ({ task }) => (
+  <View style={styles.taskItem}>
+    <Text style={styles.taskText}>{task}</Text>
+  </View>
+);
+
+const MyComponent = () => (
+  <ScrollView contentContainerStyle={styles.mainContainer}>
+    <Header />
+    <SearchBar />
+    <Text style={styles.sectionTitle}>Categories</Text>
+    <View style={styles.categoriesContainer}>
+      {categories.map((category) => (
+        <CategoryCard
+          key={category.name}
+          name={category.name}
+          tasks={category.tasks}
+          imageUri={category.imageUri}
+        />
+      ))}
+    </View>
+    <Text style={styles.sectionTitle}>Ongoing Task</Text>
+    <FlatList
+      data={tasks}
+      keyExtractor={(item, index) => `${item}-${index}`}
+      renderItem={({ item }) => <TaskItem task={item} />}
+    />
+  </ScrollView>
+);
